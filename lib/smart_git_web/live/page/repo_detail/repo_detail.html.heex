@@ -3,20 +3,21 @@
         <img src="https://avatars.githubusercontent.com/u/1481354?s=200&v=4" alt="profile" class="h-6 w-6 rounded-full">
         <div class="flex-1 space-y-1">
             <div class="flex items-center justify-between">
-                <h3 class="text-sm font-medium">Elixir language</h3>
-                <p class="text-sm text-gray-500"><strong>Watchers: </strong>500</p>
+                <h3 class="text-sm font-medium" data-role="language" data-id={@id}>Elixir language</h3>
+                <p class="text-sm text-gray-500" data-role="watcher" data-id={@id}><strong>Watchers: </strong>500</p>
             </div>
 
             <div class="flex items-center justify-between">
-                <h3 class="text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                    laudantium accusamus culpa!</h3>
-                <a href="#">button add/go</a>
+                <h3 class="text-sm font-medium" data-role="description" data-id={@id}>Lorem ipsum</h3>
+                <a href="#" data-role="button-action" data-id={@id} phx-click="add-repo" phx-target={@myself}>button add/go</a>
             </div>
 
+            <%= if @message != nil do %>
             <div class="flex items-center justify-between">
                 <div></div>
-                <p class="text-sm text-green-500">Repo added!</p>
+                <p class="text-sm text-green-500" data-role="show-message" data-id={@id}>Repo added!</p>
             </div>
+            <% end %>
         </div>
     </div>
 </li>
