@@ -26,6 +26,7 @@ config :smart_git, SmartGitWeb.Endpoint,
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
 config :smart_git, SmartGit.Mailer, adapter: Swoosh.Adapters.Local
+config :tesla, adapter: Tesla.Adapter.Hackney
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
