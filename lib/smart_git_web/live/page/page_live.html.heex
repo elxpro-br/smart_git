@@ -25,7 +25,7 @@
 <div id="list-repos" class="bg-white w-full rounded-lg shaddow p-4">
     <ul class="divide-y divide-gray-200" id="allrepos" phx-update="append">
         <%= for repo <- @repos do %>
-        <%= live_component RepoDetail, id: "repo-#{repo.git_id}", repo: repo %>
+        <%= live_component RepoDetail, id: repo.git_id, repo: repo, saved_repos: @saved_repos %>
         <% end %>
     </ul>
 </div>
