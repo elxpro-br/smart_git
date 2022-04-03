@@ -21,8 +21,28 @@ defmodule SmartGit.GitRepos.GitRepo do
   @doc false
   def changeset(git_repo, attrs) do
     git_repo
-    |> cast(attrs, [:avatar_url, :description, :forks, :git_id, :language, :name, :open_issues, :url, :watchers_count])
-    |> validate_required([:avatar_url, :description, :forks, :git_id, :language, :name, :open_issues, :url, :watchers_count])
+    |> cast(attrs, [
+      :avatar_url,
+      :description,
+      :forks,
+      :git_id,
+      :language,
+      :name,
+      :open_issues,
+      :url,
+      :watchers_count
+    ])
+    |> validate_required([
+      :avatar_url,
+      :description,
+      :forks,
+      :git_id,
+      :language,
+      :name,
+      :open_issues,
+      :url,
+      :watchers_count
+    ])
     |> unique_constraint(:git_id)
   end
 end

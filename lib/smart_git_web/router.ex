@@ -17,6 +17,7 @@ defmodule SmartGitWeb.Router do
   scope "/", SmartGitWeb do
     pipe_through :browser
 
+    live "/show_repo/:id", ShowRepoLive, :index
     live "/repos", RepoLive, :index
     live "/", PageLive, :index
   end
