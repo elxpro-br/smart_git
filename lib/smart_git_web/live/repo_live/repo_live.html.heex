@@ -1,0 +1,7 @@
+<div id="list-repos" class="bg-white w-full rounded-lg shaddow p-4">
+    <ul class="divide-y divide-gray-200" id="allrepos">
+        <%= for repo <- @repos do %>
+        <%= live_component RepoDetail, id: "repo-#{repo.git_id}", repo: repo %>
+        <% end %>
+    </ul>
+</div>

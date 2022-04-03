@@ -1,4 +1,4 @@
-defmodule SmartGitWeb.Page.RepoDetail do
+defmodule SmartGitWeb.Shared.RepoDetail do
   use SmartGitWeb, :live_component
   alias SmartGit.GitRepos
 
