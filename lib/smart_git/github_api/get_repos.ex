@@ -32,6 +32,7 @@ defmodule SmartGit.GithubApi.GetRepos do
         "watchers_count" => watchers_count,
         "forks" => forks,
         "description" => description,
+        "html_url" => url,
         "name" => name,
         "open_issues" => open_issues,
         "language" => language
@@ -43,6 +44,7 @@ defmodule SmartGit.GithubApi.GetRepos do
         full_name: full_name,
         watchers_count: watchers_count,
         forks: forks,
+        url: url,
         description: description,
         name: name,
         open_issues: open_issues,

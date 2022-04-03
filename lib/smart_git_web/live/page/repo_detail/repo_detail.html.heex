@@ -9,7 +9,10 @@
 
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-medium" data-role="description" data-id={@id}><%= @repo.description %></h3>
-                <a href="#" data-role="button-action" data-id={@id} phx-click="add-repo" phx-target={@myself}>button add/go</a>
+                <a href="#" data-role="button-action" data-id={@id} phx-click="add-repo" phx-target={@myself}>
+                    <%#= render SmartGitWeb.SharedView, "go.html", %{} %>
+                    <%= render SmartGitWeb.SharedView, "add.html", %{} %>
+                </a>
             </div>
 
             <%= if @message != nil do %>
