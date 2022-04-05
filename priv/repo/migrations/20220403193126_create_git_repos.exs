@@ -8,6 +8,7 @@ defmodule SmartGit.Repo.Migrations.CreateGitRepos do
       add :description, :text
       add :forks, :integer
       add :git_id, :integer
+      add :full_name, :string
       add :language, :string
       add :name, :string
       add :open_issues, :integer

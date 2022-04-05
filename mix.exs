@@ -62,7 +62,8 @@ defmodule SmartGit.MixProject do
       {:dialyxir, "~> 0.5.0", only: [:dev, :test], runtime: false},
       {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false},
       {:tesla, "~> 1.4"},
-      {:hackney, "~> 1.17"}
+      {:hackney, "~> 1.17"},
+      {:mock, "~> 0.3.0", only: :test}
     ]
   end
 

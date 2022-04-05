@@ -9,6 +9,7 @@ defmodule SmartGit.GitRepos.GitRepo do
     field :description, :string
     field :forks, :integer
     field :git_id, :integer
+    field :full_name, :string
     field :language, :string
     field :name, :string
     field :open_issues, :integer
@@ -26,6 +27,7 @@ defmodule SmartGit.GitRepos.GitRepo do
       :description,
       :forks,
       :git_id,
+      :full_name,
       :language,
       :name,
       :open_issues,
@@ -39,6 +41,7 @@ defmodule SmartGit.GitRepos.GitRepo do
       :git_id,
       :language,
       :name,
+      :full_name,
       :open_issues,
       :url,
       :watchers_count

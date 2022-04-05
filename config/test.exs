@@ -20,6 +20,9 @@ config :smart_git, SmartGitWeb.Endpoint,
   secret_key_base: "Z2t33lb1mom6GVmfBcp5VcCpczbpO4UIXqdm6JHet818DNzNiwO0k/0bDAtwVxNy",
   server: false
 
+config :tesla, adapter: Tesla.Mock
+
+
 # In test we don't send emails.
 config :smart_git, SmartGit.Mailer, adapter: Swoosh.Adapters.Test
 
