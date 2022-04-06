@@ -3,11 +3,13 @@ defmodule SmartGitWeb.PageLiveTest do
   import Mock
   import Phoenix.LiveViewTest
   alias SmartGit.GithubApi
+  alias SmartGit.GitRepos
 
   test "load page elements", %{conn: conn} do
     items = items()
 
     with_mock GithubApi, get_repos: fn _language, _page, _per_page -> items end do
+      items |> hd |> GitRepos.create()
       {:ok, view, _html} = live(conn, Routes.page_path(conn, :index))
 
       assert has_element?(view, "[data-role=btn-language-select][data-id=elixir]", "Elixir")
@@ -69,7 +71,7 @@ defmodule SmartGitWeb.PageLiveTest do
     end
   end
 
-  defp items() do
+  defp items do
     Enum.map(
       1..5,
       &%{
@@ -81,7 +83,7 @@ defmodule SmartGitWeb.PageLiveTest do
         url: "urll-#{&1}",
         description: "descriptionl-#{&1}",
         name: "namel-#{&1}",
-        open_issues: 23232,
+        open_issues: 23_232,
         language: "languagel-#{&1}"
       }
     )

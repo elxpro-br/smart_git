@@ -29,7 +29,7 @@ defmodule SmartGit.GithubApi.GetReposTest do
            ] == result
   end
 
-  defp items() do
+  defp items do
     [
       %{
         "id" => "id",

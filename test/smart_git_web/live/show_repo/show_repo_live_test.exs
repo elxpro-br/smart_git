@@ -10,7 +10,7 @@ defmodule SmartGitWeb.ShowRepoLiveTest do
     assert has_element?(view, "##{item.id}")
   end
 
-  defp create_item() do
+  defp create_item do
     gen_payload =
       &%{
         git_id: :rand.uniform(10_000),
@@ -21,7 +21,7 @@ defmodule SmartGitWeb.ShowRepoLiveTest do
         url: "urll-#{&1}",
         description: "descriptionl-#{&1}",
         name: "namel-#{&1}",
-        open_issues: 23232,
+        open_issues: 23_232,
         language: "languagel-#{&1}"
       }
 
