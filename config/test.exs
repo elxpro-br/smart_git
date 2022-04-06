@@ -22,7 +22,6 @@ config :smart_git, SmartGitWeb.Endpoint,
 
 config :tesla, adapter: Tesla.Mock
 
-
 # In test we don't send emails.
 config :smart_git, SmartGit.Mailer, adapter: Swoosh.Adapters.Test
 
